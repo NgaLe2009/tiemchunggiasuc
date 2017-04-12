@@ -1,0 +1,163 @@
+#header-logo-infologo{
+	float: left;
+	margin-top: 18px;
+}
+#header-logo-infologo h3 {
+	margin-bottom: 5px;
+}
+#header-logo-img{
+	float: left;
+}
+
+.user-info-right{
+	float: right;
+}
+.height-header1{
+	height: 70px;	
+}
+
+.back-to-top{
+	display: block;
+	position: relative;
+	background: #2196f3;
+	height: 26px;
+	padding: 4px 0 0 0;
+	margin-top: 6px
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+}
+#footer-content-nav {
+    overflow: hidden;
+    border-bottom: 4px 
+    solid #556dac;
+    width: 1000px
+}
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+
+  }
+  #footer-content {
+          height: 275px;
+           padding: 40px 0px;
+      }
+.fixed{
+  position: fixed;
+  right: 0px;
+  top: 30%;
+}
+.fa-fa-fmxx{
+  font-size:45px;
+  color:#157DC3;
+  display: block;
+}
+
+.portlet {
+  position: relative;
+  padding: 0;
+  margin: 0 0 2em;
+}
+
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.link-with-web{
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+.dhbk-icon-link-with-web{
+  margin-bottom: 7px;
+  float: left;
+}
+.header-linked{
+  float: left;
+  margin-top: -12px;
+  margin-left: 12px;
+}
+
+.user-name-fm{
+  text-align: center;
+  font-size: 18px;
+}
+
+.chucvu-fm{
+  font-size: 12px;
+    margin-top: 5px;
+}
+
+.officials-text p {
+  font-size: 16px;
+}
+
+.btn-width{
+  width: 110px;
+}
+.list-home{
+      margin-top: 19px;
+    margin-left: 24px;
+    margin-bottom: 10px;
+}
+.mdrow{
+  margin-right: 15px;
+  margin-left: 15px; 
+}
+
+.header-room-reg {
+  padding: 12px 20px;
+  height: 40px;
+    margin-bottom: -3px;
+    margin-top: -3px;
+    margin-left: -9px;
+}
+
+.header-room-reg p{
+  display: inline; 
+  font-size: 22px;
+
+  border: 1px solid #B0B0B0;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+
+
+
+.body-room-reg{
+  text-align: center;
+
+}
+
+.persion-reg{
+  font-size: 20px;
+  padding: 10px;
+  
+}
+.persion-on-reg{
+  color: #3084B1;
+}
+.persion-off-reg{
+  color: #CEDAD7;
+}
+
+
