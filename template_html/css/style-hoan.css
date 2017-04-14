@@ -1,0 +1,53 @@
+#calendar-injection .header-content h3{
+	font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: solid 1px #e3e1e1;
+    padding-bottom: 10px;
+    color: #006600;
+}
+#calendar-injection .body-content .form-group{
+	margin-right: 20px;
+	width: 30%;
+}
+#calendar-injection .body-content .cato-search select{
+	width: 65%;
+}
+#calendar-injection .body-content .cato-search label{
+	margin-right: 15px;
+    font-size: 1.3em;
+}
+#calendar-injection .body-content .list-calendar thead tr{
+	background: #eee;
+}
+#calendar-injection .body-content .list-calendar thead th{
+	font-weight: bold;
+	text-align: center;
+}
+#calendar-injection .body-content .list-calendar tbody td:first-child{
+	text-align: center;
+}
+#calendar-injection .body-content .list-calendar tbody .function-icon a{
+	margin-right: 10px;
+}
+#calendar-injection .body-content .function-icon{
+	text-align: center;
+}
+#calendar-detail .modal-content{
+	background: rgb(243, 240, 240);
+}
+#calendar-detail .form-horizontal .control-label{
+	color: #006600;
+}
+#calendar-detail .modal-content .modal-header h4{
+	color: #006600;
+	font-weight: bold;
+	font-size: 1.5em;	
+}
+#calendar-detail .modal-content .modal-body .form-group:last-child button{
+	width: 100px;
+	color: #006600;
+	margin-right: 20px;	
+}
+#calendar-detail .modal-content .modal-body .form-group:last-child{
+	text-align: center;
+}

@@ -26,6 +26,7 @@
 		<link href="css/mouldifi-forms.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="css/style.css" rel="stylesheet">
+		<link href="css/style-hoan.css" rel="stylesheet">
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -79,10 +80,10 @@
 						</ul>
 					</li>
 					<li class="has-sub">
-						<a href="introduce.php"><i class="icon-layout"></i><span class="title">Tiêm chủng</span></a>
+						<a href="introduce.php"><i class="icon-layout"></i><span class="title">Lịch Tiêm chủng</span></a>
 						<ul class="nav collapse">
-							<li><a href="officials_index.php"><span class="title">Lịch sử tiêm chủng</span></a></li>					
-							<li><a href="introduce_index.php"><span class="title">Lịch tiêm chủng</span></a></li>				
+							<li><a href="officials_index.php"><span class="title">Danh sách</span></a></li>					
+							<li><a href="introduce_index.php"><span class="title">Thêm mới</span></a></li>				
 						</ul>
 					</li>					
 					<li class="has-sub">
@@ -134,8 +135,109 @@
 						<!-- /user action menu -->													
 				  	</div>
 				</div>
-				<div class="main-content">
-					<h1>Code giao diên vô đây</h1>
+				<div class="main-content" id="calendar-injection">
+					<div class="header-content">
+						<h3>Danh sách Lịch tiêm chủng</h3>
+					</div>
+					<div class="body-content">
+						<div class="search-calendar">
+							<form class="form-inline">
+							  	<div class="form-group cato-search">
+							    	<label for="">Tìm theo:</label>
+							    	<select name="cato_search" class="form-control">
+							    		<option>---------Tất cả---------</option>
+							    		<option>Hộ chăn nuôi</option>
+							    		<option>Địa chỉ</option>
+							    		<option>Vắc xin</option>							    		
+							    		<option>Trạng thái</option>
+							    		<option>Thời gian</option>
+							    	</select>
+							  	</div>
+							  	<div class="form-group input-group key-search">		
+							  		<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>				    	
+							    	<input type="text" class="form-control" name="key_search">
+							  	</div>							  	
+							  	<button type="submit" name="calendar_search" class="btn btn-default">Tìm kiếm</button>
+							</form>
+						</div>
+						<div class="list-calendar">
+							<table class="table table-bordered table-striped">
+								<thead>
+								  	<tr>
+									    <th>STT</th>
+									    <th>Cán bộ tiêm</th>	
+								    	<th>Vacxin</th>
+								    	<th>Số lượng</th>
+								    	<th>Trạng thái</th>
+								    	<th>Thời gian</th>								    	
+								    	<th>Chi tiết</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Nguyễn Văn A</td>										
+										<td>Lasota</td>
+										<td>500</td>
+										<td>Hoàn thành</td>
+										<td>09/02/2017</td>
+										<td class="function-icon">
+											<a href="" data-toggle="modal" data-target="#calendar-detail"><span class="glyphicon glyphicon-list-alt"></span></a>										
+										</td>
+										
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Nguyễn Văn B</td>
+										<td>Lasota</td>
+										<td>500</td>
+										<td>Hoàn thành</td>
+										<td>09/02/2017</td>
+										<td class="function-icon">
+											<a href="" data-toggle="modal" data-target="#calendar-detail"><span class="glyphicon glyphicon-list-alt"></span></a>
+										</td>
+										
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>Nguyễn Văn C</td>
+										<td>Lasota</td>
+										<td>500</td>
+										<td>Hoàn thành</td>
+										<td>09/02/2017</td>
+										<td class="function-icon">
+											<a href="" data-toggle="modal" data-target="#calendar-detail"><span class="glyphicon glyphicon-list-alt"></span></a>
+										</td>
+										
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>Nguyễn Văn D</td>
+										<td>Lasota</td>
+										<td>500</td>
+										<td>Chưa hoàn thành</td>
+										<td>09/02/2017</td>
+										<td class="function-icon">
+											<a href="" data-toggle="modal" data-target="#calendar-detail"><span class="glyphicon glyphicon-list-alt"></span></a>
+										</td>
+										
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>Nguyễn Văn An</td>
+										<td>Lasota</td>
+										<td>500</td>
+										<td>CHưa hoàn thành</td>
+										<td>09/02/2017</td>
+										<td class="function-icon">
+											<a href="" data-toggle="modal" data-target="#calendar-detail"><span class="glyphicon glyphicon-list-alt"></span></a>									
+										</td>
+										
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
 				</div>
 				<!-- /main header -->
 				
@@ -178,11 +280,70 @@
 		  </div>
 		  <!-- /main container -->  
 		</div>
-		</span>		
+		<div>
+		<!-- Modal -->
+		<div class="modal fade" id="calendar-detail" role="dialog">
+			<div class="modal-dialog">
+			<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Chi tiết Lịch tiêm chủng</h4>
+					</div>
+					<div class="modal-body">
+						<div class="form-horizontal">
+							<div class="form-group">
+							    <label class="control-label col-sm-2" for="email">Cán bộ tiêm:</label>
+							    <div class="col-sm-10">
+								   <p class="form-control">Nguyễn Văn A</p>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label class="control-label col-sm-2" for="pwd">SĐT cán bộ:</label>
+							    <div class="col-sm-10"> 
+							       <p class="form-control">0984617351</p>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label class="control-label col-sm-2" for="pwd">Thời gian:</label>
+							    <div class="col-sm-10"> 
+							       <p class="form-control">10/02/2017</p>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label class="control-label col-sm-2" for="pwd">Vacxin:</label>
+							    <div class="col-sm-10"> 
+							       <p class="form-control">Lasota</p>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label class="control-label col-sm-2" for="pwd">Vật nuôi:</label>
+							    <div class="col-sm-10"> 
+							       <p class="form-control">Gà</p>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label class="control-label col-sm-2" for="pwd">Số lượng:</label>
+							    <div class="col-sm-10"> 
+							       <p class="form-control">400</p>
+							    </div>
+							</div>							
+							<div class="form-group"> 
+							    <div class="col-sm-offset-2 col-sm-10">								    
+								    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+							    </div>
+							</div>
+						</div>						
+					</div>
+					
+				</div>
+			</div>
+		</div>		
 		<!--Load JQuery-->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/plugins/metismenu/jquery.metisMenu.js"></script>
+
 		<script src="js/plugins/blockui-master/jquery-ui.js"></script>
 		<script src="js/plugins/blockui-master/jquery.blockUI.js"></script>
 		<!--Float Charts-->

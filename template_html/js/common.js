@@ -64,70 +64,6 @@ $(document).ready(function () {
 	];
 
 
-	// Lines
-	$.plot($('#graph-lines'), graphData, {
-		series: {
-			points: {
-				show: true,
-				radius: 3.5
-			},
-			lines: {
-				show: true,
-				fill: true
-			},
-			shadowSize: 0
-		},
-		grid: {
-			color: '#646464',
-			borderColor: 'transparent',
-			borderWidth: 20,
-			hoverable: true
-		},
-		xaxis: {
-			mode: "time",
-			tickColor: 'transparent',
-			tickDecimals: 2
-		},
-		yaxis: {
-			tickSize: 100
-		}
-	});
-
-	// Bars
-	$.plot($('#graph-bars'), graphData, {
-		series: {
-			points: {
-				show: true,
-				radius: 3.5,
-			},
-			lines: {
-				show: true,
-				fill: false
-			},
-			bars: {
-				show: false,
-				lineWidth: 5,
-				align: 'center'
-			},
-			shadowSize: 0,
-			hoverable: true
-		},
-		grid: {
-			color: '#646464',
-			borderColor: 'transparent',
-			borderWidth: 20,
-			hoverable: true
-		},
-		xaxis: {
-			mode: "time",
-			tickColor: 'transparent',
-			tickDecimals: 2
-		},
-		yaxis: {
-			tickSize: 100
-		}
-	});
-
 	var $graphBar = $('#graph-bars'), $graphLine = $('#graph-lines'), $linkLine = $('#lines'), $linkBar = $('#bars');
 	$graphBar.hide();
 	$linkLine.on('click', function (e) {
@@ -242,47 +178,7 @@ $(document).ready(function () {
 		}
 	};
 
-	// Lines
-	var plot = $.plot($('#Revenue-lines'), revenueData, options);
-
-	// Bars
-	var overview = $.plot($("#placeholder_overview"), revenueData, {
-		colors: ["#edc240", "#5eb95e"],
-		series: {
-			bars: {
-				show: true,
-				lineWidth: 5,
-				fillColor: "#5eb95e"
-			},
-			shadowSize: 2,
-			grow: {
-				active: false
-			}
-		},
-		legend: {
-			show: false
-		},
-		xaxis: {
-			ticks: [],
-			mode: "time"
-		},
-		yaxis: {
-			ticks: [],
-			min: 0,
-			autoscaleMargin: 0.1
-		},
-		selection: {
-			mode: "x"
-		},
-		grid: {
-			color: "#D6D8DB",
-			borderColor: 'transparent',
-			markingsColor: "rgba(255,255,255,0.05)",
-			/*backgroundColor: {
-				colors: ["rgba(54,58,60,0.05)", "rgba(0,0,0,0.2)"]
-			}*/
-		}
-	});
+	
 
 	$("#Revenue-lines").bind("plotselected", function (event, ranges) {
 		// do the zooming
@@ -344,23 +240,5 @@ $(document).ready(function () {
 		legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
 	};
 
-	var canvas = document.getElementById("doughnutChart");
-	var helpers = Chart.helpers;
-	//var ctx = document.getElementById("doughnutChart").getContext("2d");
-	var moduleDoughnut = new Chart(canvas.getContext("2d")).Doughnut(doughnutData, doughnutOptions);
-	var legendHolder = document.createElement('div');
-	legendHolder.innerHTML = moduleDoughnut.generateLegend();
-	helpers.each(legendHolder.firstChild.childNodes, function (legendNode, index) {
-		helpers.addEvent(legendNode, 'mouseover', function () {
-			var activeSegment = moduleDoughnut.segments[index];
-			activeSegment.save();
-			activeSegment.fillColor = activeSegment.highlightColor;
-			moduleDoughnut.showTooltip([activeSegment]);
-			activeSegment.restore();
-		});
-	});
-	helpers.addEvent(legendHolder.firstChild, 'mouseout', function () {
-		moduleDoughnut.draw();
-	});
-	canvas.parentNode.parentNode.appendChild(legendHolder.firstChild);
+	
 });
